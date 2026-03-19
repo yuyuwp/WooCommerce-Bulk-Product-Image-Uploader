@@ -32,6 +32,11 @@ A simple WordPress plugin that lets you set featured images for WooCommerce prod
 2. Activate in **Plugins**
 3. Find it under **WooCommerce → Bulk Image Uploader**
 
+## Author
+
+**Yuyu** — Full-stack Designer
+[yuyu.ng](https://yuyu.ng)
+
 ## License
 
 GPL v2 or later

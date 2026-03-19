@@ -3,7 +3,8 @@
  * Plugin Name: WooCommerce Bulk Image Uploader
  * Description: Lists all WooCommerce products with URL input fields to bulk-set featured images from external URLs. Images are downloaded to the Media Library.
  * Version: 1.0.0
- * Author: Your Name
+ * Author: Yuyu
+ * Author URI: https://yuyu.ng
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * WC requires at least: 5.0
