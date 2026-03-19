@@ -247,8 +247,9 @@ class WC_Bulk_Image_Uploader {
                 </thead>
                 <tbody>
                     <?php foreach ( $products as $p ) :
-                        $thumb_id  = (int) get_post_meta( $p->ID, '_thumbnail_id', true );
-                        $thumb_url = $thumb_id ? wp_get_attachment_image_url( $thumb_id, 'thumbnail' ) : '';
+                        $thumb_id      = (int) get_post_meta( $p->ID, '_thumbnail_id', true );
+                        $thumb_url     = $thumb_id ? wp_get_attachment_image_url( $thumb_id, 'thumbnail' ) : '';
+                        $full_img_url  = $thumb_id ? wp_get_attachment_url( $thumb_id ) : '';
                     ?>
                     <tr data-pid="<?php echo (int) $p->ID; ?>">
                         <td>
@@ -265,7 +266,7 @@ class WC_Bulk_Image_Uploader {
                             </div>
                         </td>
                         <td>
-                            <input type="url" class="wcbiu-url-input" id="url-<?php echo (int) $p->ID; ?>" placeholder="https://example.com/image.jpg" autocomplete="off">
+                            <input type="url" class="wcbiu-url-input" id="url-<?php echo (int) $p->ID; ?>" placeholder="<?php echo $full_img_url ? esc_url( $full_img_url ) : 'https://example.com/image.jpg'; ?>" autocomplete="off">
                             <div class="wcbiu-status" id="status-<?php echo (int) $p->ID; ?>"></div>
                         </td>
                     </tr>
